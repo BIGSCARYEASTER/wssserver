@@ -1,7 +1,12 @@
 from cloudlink import server
-
+import os
+# Read Render's assigned port string, use 10000 if running locally
+port_env = int(os.environ.get("PORT", 10000))
 # Import protocols
+
 from cloudlink.server.protocols import clpv4, scratch
+
+
 
 # Instantiate the server object
 server = server()
